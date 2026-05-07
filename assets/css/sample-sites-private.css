@@ -3276,6 +3276,217 @@ body.page-pricing {
   background: rgba(93, 143, 200, 0.65);
 }
 
+.about-page {
+  max-width: 1120px;
+  margin-left: auto;
+  margin-right: auto;
+  gap: clamp(1.8rem, 4vw, 3rem);
+}
+
+.about-proof-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+  padding-bottom: clamp(2rem, 5vw, 3.75rem);
+}
+
+.about-proof-card {
+  border: 1px solid rgba(205, 218, 232, 0.92);
+  border-radius: 18px;
+  background: #ffffff;
+  padding: clamp(1rem, 2.4vw, 1.4rem);
+  box-shadow: 0 2px 12px rgba(13, 34, 56, 0.05);
+}
+
+.about-proof-card h3 {
+  margin: 0 0 0.45rem;
+  font-family: "Source Serif 4", Georgia, serif;
+  font-size: 1.24rem;
+  line-height: 1.2;
+  color: #1f3145;
+}
+
+.about-proof-card p {
+  margin: 0;
+  color: #36506a;
+  line-height: 1.6;
+}
+
+.about-page--redesign {
+  max-width: 1120px;
+  margin-top: clamp(1.4rem, 4vw, 2.6rem);
+  margin-left: auto;
+  margin-right: auto;
+  gap: clamp(1.5rem, 4vw, 2.7rem);
+  padding-top: 0;
+  padding-bottom: clamp(2.4rem, 5vw, 4rem);
+}
+
+.about-hero-card {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(1.25rem, 3vw, 2rem);
+  padding: clamp(1.1rem, 3vw, 1.7rem);
+  border: 1px solid rgba(195, 211, 227, 0.96);
+  border-radius: 22px;
+  background:
+    radial-gradient(ellipse 120% 100% at 0% 0%, rgba(93, 143, 200, 0.16), transparent 45%),
+    linear-gradient(145deg, #f9fcff 0%, #eff5fc 100%);
+  box-shadow: 0 10px 28px rgba(13, 34, 56, 0.07);
+}
+
+.about-hero-card__profile {
+  display: grid;
+  align-content: start;
+  justify-items: start;
+  gap: 0.45rem;
+  padding: 0.95rem;
+  border: 1px solid rgba(188, 206, 224, 0.9);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.84);
+}
+
+.about-hero-card__headshot {
+  width: min(142px, 100%);
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center 28%;
+  border-radius: 14px;
+  border: 1px solid rgba(188, 206, 224, 0.95);
+}
+
+.about-hero-card__name {
+  margin: 0.35rem 0 0;
+  font-family: "Source Serif 4", Georgia, serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #1f3145;
+}
+
+.about-hero-card__role {
+  margin: 0;
+  color: #4b627a;
+  font-size: 0.94rem;
+}
+
+.about-hero-card__meta {
+  margin: 0.5rem 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.42rem;
+}
+
+.about-hero-card__meta li {
+  font-size: 0.88rem;
+  color: #25405b;
+  font-weight: 600;
+}
+
+.about-hero-card__copy h1 {
+  margin: 0.4rem 0 0.8rem;
+  max-width: 18ch;
+  font-family: "Source Serif 4", Georgia, serif;
+  font-weight: 600;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  line-height: 1.03;
+  letter-spacing: -0.04em;
+  color: #162f49;
+}
+
+.about-hero-card__lead {
+  margin: 0;
+  max-width: 66ch;
+  color: #33506b;
+  line-height: 1.72;
+}
+
+.about-hero-card__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  margin-top: 1.1rem;
+}
+
+.about-story-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.about-story-card {
+  border: 1px solid rgba(205, 218, 232, 0.92);
+  border-radius: 18px;
+  background: #ffffff;
+  padding: clamp(1rem, 2.4vw, 1.35rem);
+  box-shadow: 0 2px 12px rgba(13, 34, 56, 0.05);
+}
+
+.about-story-card h2 {
+  margin: 0 0 0.55rem;
+  font-family: "Source Serif 4", Georgia, serif;
+  font-size: 1.3rem;
+  line-height: 1.2;
+  color: #20364f;
+}
+
+.about-story-card p {
+  margin: 0;
+  color: #36506a;
+  line-height: 1.64;
+}
+
+.about-story-card p + p {
+  margin-top: 0.75rem;
+}
+
+.about-skills-panel {
+  border: 1px solid rgba(196, 213, 230, 0.94);
+  border-radius: 20px;
+  background:
+    radial-gradient(ellipse 90% 120% at 100% 0%, rgba(93, 143, 200, 0.09), transparent 48%),
+    #ffffff;
+  padding: clamp(1.05rem, 2.6vw, 1.5rem);
+}
+
+.about-skills-panel h2 {
+  margin: 0 0 0.85rem;
+  font-family: "Source Serif 4", Georgia, serif;
+  font-size: clamp(1.5rem, 3vw, 1.95rem);
+  color: #1f3145;
+}
+
+.about-skill-grid {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.6rem;
+}
+
+.about-skill-grid li {
+  position: relative;
+  padding: 0.66rem 0.78rem 0.66rem 1.55rem;
+  border: 1px solid rgba(205, 218, 232, 0.85);
+  border-radius: 12px;
+  background: rgba(248, 252, 255, 0.92);
+  color: #2a4662;
+  line-height: 1.42;
+}
+
+.about-skill-grid li::before {
+  content: "";
+  position: absolute;
+  left: 0.72rem;
+  top: 50%;
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  transform: translateY(-50%);
+  background: var(--brand);
+}
+
 .closing-credibility {
   margin: 0;
   padding: 0;
@@ -3803,6 +4014,26 @@ body.page-pricing {
   .about-band {
     grid-template-columns: minmax(300px, 0.46fr) minmax(0, 0.54fr);
     gap: clamp(2rem, 5vw, 4rem);
+  }
+
+  .about-proof-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.15rem;
+  }
+
+  .about-hero-card {
+    grid-template-columns: minmax(230px, 0.34fr) minmax(0, 0.66fr);
+    align-items: start;
+  }
+
+  .about-story-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.15rem;
+  }
+
+  .about-skill-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.7rem;
   }
 
   .mockup-form-card {
