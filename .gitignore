@@ -1,0 +1,6 @@
+.site-root.err.log
+.site-root.out.log
+sample-sites/.sample-sites.err.log
+sample-sites/.sample-sites.out.log
+.DS_Store
+Thumbs.db

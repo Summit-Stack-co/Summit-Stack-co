@@ -1,0 +1,536 @@
+:root {
+  --charcoal-950: #171518;
+  --charcoal-900: #262126;
+  --charcoal-800: #393037;
+  --red-950: #4d1920;
+  --red-900: #631f29;
+  --red-800: #7f2c38;
+  --red-700: #9a3846;
+  --red-500: #bf5964;
+  --cream: #f7efe4;
+  --cream-deep: #eadfce;
+  --cream-dim: #6a5b57;
+  --ink: #251b1d;
+  --ink-soft: #5e4f4d;
+  --line: rgba(127, 44, 56, 0.16);
+  --plaid-red: rgba(154, 56, 70, 0.16);
+  --plaid-dark: rgba(38, 33, 38, 0.12);
+  --plaid-light: rgba(255, 249, 243, 0.08);
+  --container: 1220px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at top, rgba(191, 89, 100, 0.14), transparent 24%),
+    linear-gradient(180deg, #f8f0e6 0%, #f2e6d9 44%, #f7efe4 100%);
+}
+
+a {
+  color: inherit;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0 0 0.9rem;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-weight: 600;
+  line-height: 0.98;
+  letter-spacing: -0.03em;
+  color: var(--ink);
+}
+
+h1 {
+  font-size: clamp(3.1rem, 10vw, 6.8rem);
+}
+
+h2 {
+  font-size: clamp(2.1rem, 6vw, 4rem);
+}
+
+h3 {
+  font-size: 1.6rem;
+}
+
+p {
+  margin: 0 0 1rem;
+  line-height: 1.68;
+  color: var(--ink-soft);
+}
+
+.container {
+  width: min(var(--container), calc(100% - 2rem));
+  margin: 0 auto;
+}
+
+.section {
+  padding: 5.6rem 0;
+}
+
+.site-header {
+  position: absolute;
+  inset: 0 0 auto 0;
+  z-index: 30;
+  padding-top: 0.9rem;
+}
+
+.header-inner {
+  min-height: 74px;
+  display: grid;
+  gap: 1rem;
+  align-items: center;
+}
+
+.back-link {
+  position: absolute;
+  left: max(0.55rem, env(safe-area-inset-left));
+  top: 1.25rem;
+  z-index: 2;
+  text-decoration: none;
+  color: #f3e7d8;
+  font-size: 0.92rem;
+}
+
+.back-link:hover {
+  color: #fff9f1;
+}
+
+.brand {
+  text-decoration: none;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.7rem;
+  letter-spacing: 0.02em;
+}
+
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem 1.15rem;
+}
+
+.site-nav a {
+  text-decoration: none;
+  color: #f0e1cf;
+  font-size: 0.95rem;
+}
+
+.site-nav a:hover {
+  color: #fff9f1;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  padding: 0.82rem 1.2rem;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.btn-solid {
+  background: var(--red-700);
+  border-color: rgba(127, 44, 56, 0.42);
+  color: #fff6ee;
+}
+
+.btn-solid:hover {
+  background: var(--red-800);
+}
+
+.btn-outline {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 246, 235, 0.32);
+  color: #fff4e6;
+}
+
+.btn-outline:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.hero-section {
+  position: relative;
+  min-height: 100svh;
+}
+
+.hero-media {
+  min-height: 100svh;
+  background:
+    linear-gradient(0deg, rgba(23, 21, 24, 0.7), rgba(23, 21, 24, 0.24)),
+    radial-gradient(circle at 70% 22%, rgba(191, 89, 100, 0.22), transparent 18%),
+    linear-gradient(135deg, rgba(120, 46, 58, 0.72), rgba(38, 33, 38, 0.86)),
+    repeating-linear-gradient(135deg, rgba(255, 255, 255, 0.04) 0 2px, transparent 2px 18px);
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+}
+
+.hero-content {
+  max-width: 760px;
+  padding-bottom: 6rem;
+}
+
+.hero-kicker,
+.eyebrow {
+  display: inline-block;
+  margin: 0 0 0.9rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--red-700);
+  font-weight: 700;
+}
+
+.hero-content h1,
+.hero-content p,
+.hero-content .hero-kicker {
+  color: #fff3e6;
+}
+
+.hero-content p {
+  max-width: 42rem;
+  font-size: 1.06rem;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: 1.7rem;
+}
+
+.section-intro {
+  max-width: 42rem;
+  margin-bottom: 2rem;
+}
+
+.menu-section {
+  padding-top: 5.2rem;
+  padding-bottom: 6rem;
+  background:
+    linear-gradient(180deg, rgba(255, 249, 242, 0.42), rgba(255, 249, 242, 0.78)),
+    repeating-linear-gradient(0deg, transparent 0 28px, rgba(154, 56, 70, 0.04) 28px 29px),
+    repeating-linear-gradient(90deg, transparent 0 28px, rgba(38, 33, 38, 0.03) 28px 29px);
+}
+
+.menu-columns {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.menu-group {
+  padding-top: 0.35rem;
+}
+
+.menu-group-offset {
+  transform: translateY(0);
+}
+
+.menu-group h3 {
+  margin-bottom: 1rem;
+  padding-bottom: 0.55rem;
+  border-bottom: 1px solid var(--line);
+  color: var(--red-900);
+}
+
+.menu-item {
+  padding: 0.85rem 0;
+  border-bottom: 1px solid rgba(127, 44, 56, 0.1);
+}
+
+.menu-item-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.3rem;
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.menu-item p {
+  margin: 0;
+  font-size: 0.96rem;
+}
+
+.gallery-section {
+  padding-top: 4.7rem;
+  padding-bottom: 6rem;
+  background: linear-gradient(180deg, rgba(242, 230, 219, 0.48), rgba(247, 239, 228, 0));
+}
+
+.gallery-intro {
+  margin-bottom: 1.6rem;
+}
+
+.gallery-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.gallery-tile {
+  margin: 0;
+}
+
+.gallery-tile figcaption {
+  margin-top: 0.7rem;
+  color: #c0b19e;
+  font-size: 0.9rem;
+}
+
+.gallery-media {
+  min-height: 280px;
+  border-radius: 26px;
+  box-shadow: 0 18px 30px rgba(85, 45, 50, 0.08);
+}
+
+.gallery-tile-tall .gallery-media {
+  min-height: 420px;
+}
+
+.gallery-tile-wide .gallery-media {
+  min-height: 340px;
+}
+
+.gallery-food {
+  background:
+    radial-gradient(circle at 28% 34%, rgba(232, 149, 123, 0.18), transparent 22%),
+    linear-gradient(135deg, rgba(126, 43, 54, 0.92), rgba(44, 37, 40, 0.96));
+}
+
+.gallery-interior {
+  background:
+    radial-gradient(circle at top left, rgba(191, 89, 100, 0.16), transparent 24%),
+    linear-gradient(135deg, rgba(113, 52, 60, 0.9), rgba(52, 43, 48, 0.96));
+}
+
+.gallery-bar {
+  background:
+    radial-gradient(circle at center, rgba(216, 122, 112, 0.16), transparent 18%),
+    linear-gradient(135deg, rgba(120, 54, 60, 0.92), rgba(46, 39, 44, 0.96));
+}
+
+.gallery-chef {
+  background:
+    radial-gradient(circle at 65% 35%, rgba(233, 136, 104, 0.18), transparent 18%),
+    linear-gradient(135deg, rgba(126, 48, 54, 0.88), rgba(43, 37, 41, 0.96));
+}
+
+.gallery-texture {
+  background:
+    radial-gradient(circle at 30% 70%, rgba(191, 89, 100, 0.16), transparent 18%),
+    linear-gradient(135deg, rgba(116, 46, 52, 0.9), rgba(43, 37, 41, 0.96)),
+    repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.04) 0 2px, transparent 2px 16px);
+}
+
+.about-section {
+  padding-top: 5.4rem;
+  padding-bottom: 4.5rem;
+  background: rgba(255, 249, 242, 0.44);
+}
+
+.about-shell {
+  max-width: 760px;
+}
+
+.about-shell h2 {
+  max-width: 44rem;
+}
+
+.experience-section {
+  padding-top: 4.5rem;
+  padding-bottom: 5.8rem;
+  background:
+    linear-gradient(180deg, rgba(243, 231, 220, 0.22), rgba(255, 250, 244, 0)),
+    repeating-linear-gradient(90deg, transparent 0 42px, rgba(154, 56, 70, 0.03) 42px 43px);
+}
+
+.experience-shell {
+  display: grid;
+  gap: 1rem;
+}
+
+.experience-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.experience-item {
+  padding: 0.15rem 0 1rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.experience-item p {
+  margin: 0;
+  max-width: 30rem;
+}
+
+.reservation-section {
+  padding-top: 5rem;
+  padding-bottom: 4.8rem;
+}
+
+.reservation-shell {
+  display: flex;
+  justify-content: center;
+}
+
+.reservation-card {
+  width: min(640px, 100%);
+  padding: 2rem;
+  border-radius: 30px;
+  background:
+    linear-gradient(180deg, rgba(249, 241, 232, 0.98), rgba(241, 230, 217, 0.98)),
+    repeating-linear-gradient(0deg, transparent 0 22px, rgba(154, 56, 70, 0.04) 22px 23px),
+    repeating-linear-gradient(90deg, transparent 0 22px, rgba(38, 33, 38, 0.03) 22px 23px);
+  border: 1px solid rgba(127, 44, 56, 0.14);
+}
+
+.reservation-helper {
+  margin-bottom: 1.35rem;
+  color: var(--ink-soft);
+}
+
+.reservation-form {
+  display: grid;
+  gap: 0.72rem;
+}
+
+.reservation-form label {
+  color: var(--ink);
+  font-size: 0.94rem;
+}
+
+.reservation-form input,
+.reservation-form select {
+  width: 100%;
+  font: inherit;
+  color: var(--ink);
+  background: rgba(255, 252, 248, 0.92);
+  border: 1px solid rgba(127, 44, 56, 0.16);
+  border-radius: 16px;
+  padding: 0.92rem 1rem;
+}
+
+.reservation-card h2,
+.reservation-card .eyebrow {
+  color: var(--red-900);
+}
+
+.subtle-cta {
+  padding: 1.5rem 0 2.4rem;
+  background:
+    linear-gradient(180deg, rgba(255, 248, 240, 0.28), rgba(255, 248, 240, 0.14)),
+    repeating-linear-gradient(45deg, rgba(154, 56, 70, 0.05) 0 10px, transparent 10px 20px);
+}
+
+.subtle-cta-inner {
+  text-align: center;
+}
+
+.subtle-cta p {
+  color: #6b5252;
+}
+
+.site-footer {
+  padding: 2.2rem 0 2.6rem;
+  border-top: 1px solid rgba(76, 84, 94, 0.1);
+  background:
+    linear-gradient(180deg, rgba(243, 231, 220, 0.72), rgba(239, 225, 213, 0.82)),
+    repeating-linear-gradient(0deg, transparent 0 26px, rgba(154, 56, 70, 0.04) 26px 27px),
+    repeating-linear-gradient(90deg, transparent 0 26px, rgba(38, 33, 38, 0.03) 26px 27px);
+}
+
+.footer-inner {
+  display: grid;
+  gap: 1.4rem;
+}
+
+.footer-brand {
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.footer-note {
+  color: #8a7465;
+}
+
+@media (min-width: 760px) {
+  .header-inner {
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+  }
+
+  .site-nav {
+    justify-content: center;
+  }
+
+  .menu-columns {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 2.4rem;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1.15fr 0.85fr 0.95fr;
+    align-items: start;
+  }
+
+  .gallery-tile-tall {
+    grid-row: span 2;
+  }
+
+  .gallery-tile-wide {
+    grid-column: span 2;
+  }
+
+  .experience-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.4rem;
+  }
+
+  .footer-inner {
+    grid-template-columns: 1fr 1fr;
+    align-items: end;
+  }
+
+  .footer-inner > :last-child {
+    text-align: right;
+  }
+}
+
+@media (min-width: 980px) {
+  .menu-columns {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .menu-group-offset {
+    transform: translateY(1.7rem);
+  }
+
+  .gallery-tile-offset {
+    transform: translateY(2.2rem);
+  }
+}
