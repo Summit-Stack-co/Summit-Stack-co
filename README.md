@@ -27,6 +27,22 @@ python -m http.server 8080
 
 Then visit `http://localhost:8080/`.
 
+## Deploy on GitHub Pages
+
+This repo includes a **GitHub Actions** workflow (`.github/workflows/deploy-github-pages.yml`) that publishes the **repository root** as a static site whenever you push to `main`.
+
+1. On GitHub, open the repo → **Settings** → **Pages**.
+2. Under **Build and deployment**, set **Source** to **GitHub Actions** (not “Deploy from a branch”).
+3. Push to `main` (or run the workflow manually under **Actions** → **Deploy GitHub Pages** → **Run workflow**).
+4. After the job succeeds, Pages shows the site URL (often `https://<owner>.github.io/<repo>/`).
+
+The site uses **relative** links and paths, so it works on a project URL that includes the repository name. A root `.nojekyll` file is included so GitHub does not treat the site as a Jekyll project.
+
+**Org / repo:** If this is `Summit-Stack-co/Summit-Stack-co`, the default URL is typically  
+`https://summit-stack-co.github.io/Summit-Stack-co/`.
+
+**Custom domain** (optional): add your domain under **Pages**, add a `CNAME` file in the repo root, and configure DNS as GitHub documents.
+
 **Node** (if you use npx):
 
 ```bash
